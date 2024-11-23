@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookMark</title>
+    <link rel="icon" href="images/bookmark.png" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/bootstrap.bundle.min.js"></script>
+    <script defer src="js/index.js"></script>
+  </head>
+  <body>
+    <div class="co">
+      <div class="container">
+        <h1 class="m-auto my-5">Bookmarker</h1>
+        <div class="doot p-3 py-4">
+          <h3 class="text-center">
+            <i class="fa-solid fa-bookmark"></i>
+            Bookmark your favorite sites
+            <i class="fa-solid fa-bookmark"></i>
+          </h3>
+          <div class="mb-3">
+            <label class="mb-3" for="name">
+              <i class="fa-solid fa-book-bookmark pe-2"></i> Site Name</label
+            >
+            <input
+              type="text"
+              oninput="validateInputs(this)"
+              class="form-control"
+              id="name"
+              placeholder=" Bookmark Name"
+            />
+            <div class="alert alert-danger p-2 mt-2 d-none">
+              Site name must contain at least 3 characters
+            </div>
+          </div>
+
+          <div>
+            <label class="mb-3" for="url">
+              <i class="fa-solid fa-link pe-2"></i> Site URL</label
+            >
+            <input
+              type="text"
+              oninput="validateInputs(this)"
+              class="form-control"
+              id="url"
+              placeholder="Website URL"
+            />
+            <div class="alert alert-danger p-2 mt-2 d-none">
+              The url must start with http:// or https:// and end with com or
+              org or path or file
+            </div>
+          </div>
+          <div class="text-center">
+            <button id="addName" class="btn btn-submit my-3">Submit</button>
+          </div>
+        </div>
+        <table class="table my-3 text-center">
+          <thead>
+            <th>Index</th>
+            <th>Website Name</th>
+            <th>Visit</th>
+            <th>Delete</th>
+          </thead>
+          <tbody id="myRow"></tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
